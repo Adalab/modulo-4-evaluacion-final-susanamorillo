@@ -50,6 +50,9 @@ app.get('/personajes', async (req, res) => {
 
   const conn = await getConnection();
   const [results] = await conn.query(query);
+  res.json({
+    results: results,
+  });
 });
 
 //Endpoint actualizar una entrada existente
@@ -57,7 +60,7 @@ app.get('/personajes', async (req, res) => {
 app.put('/personajes/:id', async (req, res) => {
   const dataPersonajes = req.body;
   const { nombre, peliculas, sinopsis } = dataPersonajes;
-  const idPersonajes = req.params.id;
+  const idPersonajes = req.query.id;
   let sql =
     'UPDATE personajes SET nombre= "? ", peliculas= "?", sinopsis= "?" WHERE id = ?';
   const conn = await getConnection();
