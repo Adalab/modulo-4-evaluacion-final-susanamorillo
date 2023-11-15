@@ -14,7 +14,7 @@ my express server, I have designed a series of endpoints for requests to the dat
 
 
 I have documented my project through the Postman tool, and the url to access said documentation
-is ** https://documenter.getpostman.com/view/31173669/2s9YXnzebN.**
+is https://documenter.getpostman.com/view/31173669/2s9YXnzebN.
             
 
 
